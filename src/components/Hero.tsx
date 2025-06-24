@@ -2,54 +2,66 @@ import Icon from "@/components/ui/icon";
 
 const Hero = () => {
   return (
-    <section
-      id="home"
-      className="bg-gradient-to-br from-orange-500 via-orange-600 to-blue-600 text-white py-20 px-4"
-    >
-      <div className="max-w-7xl mx-auto text-center">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-          Оснащение спортивных залов
-          <span className="block text-3xl md:text-4xl mt-2 text-orange-200">
-            под ключ
-          </span>
-        </h1>
+    <section id="home" className="bg-white py-20 lg:py-32 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Профессиональное оснащение спортивных залов
+              <span className="block text-blue-600 mt-2">под ключ</span>
+            </h1>
 
-        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-          Консультации экспертов • Поставка оборудования • Установка и настройка
-        </p>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              Полный комплекс услуг: от консультации до установки. Работаем с
+              залами любого масштаба по всей России.
+            </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <button className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">
-            Получить консультацию
-          </button>
-          <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-orange-600 transition-colors">
-            Каталог оборудования
-          </button>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div className="flex flex-col items-center">
-            <div className="bg-white/20 p-4 rounded-full mb-4">
-              <Icon name="Users" size={32} />
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg">
+                Получить расчет
+              </button>
+              <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors">
+                Посмотреть каталог
+              </button>
             </div>
-            <h3 className="text-xl font-semibold mb-2">500+ залов</h3>
-            <p className="text-orange-200">успешно оснащено</p>
+
+            <div className="grid grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-blue-600 mb-1">
+                  500+
+                </div>
+                <div className="text-sm text-gray-600">залов оснащено</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-blue-600 mb-1">15</div>
+                <div className="text-sm text-gray-600">лет опыта</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-blue-600 mb-1">
+                  24/7
+                </div>
+                <div className="text-sm text-gray-600">поддержка</div>
+              </div>
+            </div>
           </div>
 
-          <div className="flex flex-col items-center">
-            <div className="bg-white/20 p-4 rounded-full mb-4">
-              <Icon name="Award" size={32} />
+          <div className="relative">
+            <img
+              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop"
+              alt="Современный спортивный зал"
+              className="w-full rounded-2xl shadow-2xl"
+            />
+            <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl border">
+              <div className="flex items-center space-x-3">
+                <Icon name="CheckCircle" className="text-green-500" size={24} />
+                <div>
+                  <div className="font-semibold text-gray-900">
+                    Гарантия качества
+                  </div>
+                  <div className="text-sm text-gray-600">5 лет гарантии</div>
+                </div>
+              </div>
             </div>
-            <h3 className="text-xl font-semibold mb-2">15 лет</h3>
-            <p className="text-orange-200">опыта на рынке</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <div className="bg-white/20 p-4 rounded-full mb-4">
-              <Icon name="Truck" size={32} />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Доставка</h3>
-            <p className="text-orange-200">по всей России</p>
           </div>
         </div>
       </div>

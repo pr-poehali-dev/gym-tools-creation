@@ -29,60 +29,54 @@ const ContactSection = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Получить консультацию
+            Получить коммерческое предложение
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Свяжитесь с нами для бесплатной консультации по оснащению вашего
-            зала
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Оставьте заявку и получите персональный расчет стоимости оснащения
+            вашего зала в течение 30 минут
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
+          <div className="bg-white p-8 rounded-2xl shadow-xl">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-              Контактная информация
+              Связаться с нами
             </h3>
 
             <div className="space-y-6">
-              <div className="flex items-center">
-                <div className="bg-orange-100 p-3 rounded-lg">
-                  <Icon name="Phone" className="text-orange-600" size={24} />
+              <div className="flex items-start">
+                <div className="bg-blue-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                  <Icon name="Phone" className="text-blue-600" size={24} />
                 </div>
-                <div className="ml-4">
-                  <h4 className="font-semibold text-gray-900">Телефон</h4>
-                  <p className="text-gray-600">+7 (495) 123-45-67</p>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">Телефон</h4>
+                  <p className="text-2xl font-bold text-blue-600">
+                    +7 (495) 123-45-67
+                  </p>
+                  <p className="text-gray-600 text-sm">Звонок бесплатный</p>
                 </div>
               </div>
 
-              <div className="flex items-center">
-                <div className="bg-orange-100 p-3 rounded-lg">
-                  <Icon name="Mail" className="text-orange-600" size={24} />
+              <div className="flex items-start">
+                <div className="bg-blue-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                  <Icon name="Mail" className="text-blue-600" size={24} />
                 </div>
-                <div className="ml-4">
-                  <h4 className="font-semibold text-gray-900">Email</h4>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
                   <p className="text-gray-600">info@gympro.ru</p>
                 </div>
               </div>
 
-              <div className="flex items-center">
-                <div className="bg-orange-100 p-3 rounded-lg">
-                  <Icon name="MapPin" className="text-orange-600" size={24} />
+              <div className="flex items-start">
+                <div className="bg-blue-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                  <Icon name="Clock" className="text-blue-600" size={24} />
                 </div>
-                <div className="ml-4">
-                  <h4 className="font-semibold text-gray-900">Адрес</h4>
-                  <p className="text-gray-600">
-                    г. Москва, ул. Спортивная, д. 15
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center">
-                <div className="bg-orange-100 p-3 rounded-lg">
-                  <Icon name="Clock" className="text-orange-600" size={24} />
-                </div>
-                <div className="ml-4">
-                  <h4 className="font-semibold text-gray-900">Время работы</h4>
-                  <p className="text-gray-600">Пн-Пт: 9:00-18:00</p>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">
+                    Режим работы
+                  </h4>
+                  <p className="text-gray-600">Пн-Пт: 9:00-20:00</p>
+                  <p className="text-gray-600">Сб-Вс: 10:00-18:00</p>
                 </div>
               </div>
             </div>
@@ -91,15 +85,19 @@ const ContactSection = () => {
           <div>
             <form
               onSubmit={handleSubmit}
-              className="bg-white p-8 rounded-xl shadow-lg"
+              className="bg-white p-8 rounded-2xl shadow-xl"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+                Оставить заявку
+              </h3>
+
+              <div className="space-y-6">
                 <div>
                   <label
                     htmlFor="name"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Имя *
+                    Ваше имя *
                   </label>
                   <input
                     type="text"
@@ -108,9 +106,11 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    placeholder="Введите ваше имя"
                   />
                 </div>
+
                 <div>
                   <label
                     htmlFor="phone"
@@ -125,52 +125,58 @@ const ContactSection = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    placeholder="+7 (___) ___-__-__"
                   />
                 </div>
-              </div>
 
-              <div className="mb-6">
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    placeholder="your@email.com"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Комментарий к заявке
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4}
+                    className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+                    placeholder="Опишите ваш проект, площадь зала, пожелания..."
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 text-white py-4 px-6 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
                 >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                />
-              </div>
+                  Получить коммерческое предложение
+                </button>
 
-              <div className="mb-6">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-                  Сообщение
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  placeholder="Расскажите о вашем проекте..."
-                ></textarea>
+                <p className="text-xs text-gray-500 text-center">
+                  Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+                </p>
               </div>
-
-              <button
-                type="submit"
-                className="w-full bg-orange-500 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-orange-600 transition-colors shadow-lg"
-              >
-                Отправить заявку
-              </button>
             </form>
           </div>
         </div>
